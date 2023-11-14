@@ -4,7 +4,6 @@ import {
   ContLabel,
   ContInput,
   AddButton,
-  Btn,
 } from 'components/ContactForm/ContactForm.styled';
 import { nanoid } from 'nanoid';
 
@@ -54,7 +53,6 @@ export class ContactForm extends Component {
             id={this.nameInputId}
             required
           />
-          <Btn>Hello</Btn>
         </ContLabel>
         <ContLabel htmlFor={this.nameInputId}>
           Number

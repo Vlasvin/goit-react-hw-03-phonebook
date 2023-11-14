@@ -55,7 +55,3 @@ export const AddButton = styled.button`
     background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   }
 `;
-export const Btn = styled.button`
-  box-shadow: 43px -31px 43px 0 rgba(255, 255, 255, 0.64),
-    48px 26px 48px 0 rgba(13, 39, 80, 0.16);
-`;
