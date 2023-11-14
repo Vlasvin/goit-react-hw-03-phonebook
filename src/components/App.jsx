@@ -43,10 +43,22 @@ export class App extends Component {
     }));
   };
 
+  componentDidMount() {
+    const storedContacts = localStorage.getItem('contacts');
+    if (storedContacts) {
+      this.setState({ contacts: JSON.parse(storedContacts) });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
   render() {
     const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
-
     return (
       <Div>
         <h1>Phonebook</h1>
